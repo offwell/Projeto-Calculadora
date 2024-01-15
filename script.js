@@ -12,7 +12,31 @@
 //     alert(`A multiplicação de ${num1} x ${num2} é igual a ${num1 * num2}`)
 
 // }else if (operacao == "4"){
-//     alert(`A divisão de ${num1} + ${num2} é igual a ${num1 / num2}`)
+//     alert(`A divisão de ${num1} + ${num2} é igual a ${num1 / num2}`) 
 
 // }
 
+function addNum(numero){
+    document.getElementById('visor').value += numero;
+}
+
+function displayClear(){
+    document.getElementById('visor').value = ''; 
+} 
+
+function addOp(operacao){
+    document.getElementById('visor').value += operacao;
+}
+
+function calcular_resultado(){
+    let visor = document.getElementById('visor');
+    let expressao = visor.value;
+    
+    try {
+        let resultado = eval(expressao);
+        visor.value = resultado;
+    }catch (error){
+        visor.value = "Erro";
+}
+
+}

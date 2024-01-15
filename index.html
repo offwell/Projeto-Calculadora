@@ -9,37 +9,46 @@
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+
 </head>
 <body>
-    <h1>Calculadora 1.0</h1>
-    <p>Essa é a primeira versão ainda em desenvolvimento da calculadora.</p>
+    <h1>Calculadora 2.0</h1>
+    <p>Essa é a segunda versão ainda em desenvolvimento da calculadora.</p>
+    <p>Nessa versão foram implementados botões, e um sistema de interação entre eles para revalar os valores no visor</p>
+
+    <div class="input-center">
+        <input type="text" id="visor" readonly>
+    </div>
 
     <div class="grupos">
         <div class="grupo1">
-            <button>1</button>
-            <button>2</button>
-            <button>3</button>
-            <button>+</button>
+            <button onclick="addNum('1')">1</button>
+            <button onclick="addNum('2')">2</button>
+            <button onclick="addNum('3')">3</button>
+            <button onclick="addOp('+')">+</button>
         </div>
         
         <div class="grupo2">
-            <button>4</button>
-            <button>5</button>
-            <button>6</button>
-            <button>-</button>
+            <button onclick="addNum('4')">4</button>
+            <button onclick="addNum('5')">5</button>
+            <button onclick="addNum('6')">6</button>
+            <button onclick="addOp('-')">-</button>
         </div>
         
         <div class=" grupo3">
-            <button>7</button>
-            <button>8</button>
-            <button>9</button>
-            <button>X</button>
+            <button onclick="addNum('7')">7</button>
+            <button onclick="addNum('8')">8</button>
+            <button onclick="addNum('9')">9</button>
+            <button onclick="addOp('*')">*</button>
         </div>
         <div class="grupo4">
-            <button>,</button>
-            <button>0</button>
-            <button>=</button>
-            <button>/</button>
+            <button onclick="displayClear()">C</button>
+            <button onclick="addNum('0')">0</button>
+            <button onclick="calcular_resultado()">=</button>
+            <button onclick="addOp('/')">/</button>
     </div>
 
 </body>
