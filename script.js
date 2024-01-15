@@ -17,26 +17,26 @@
 // }
 
 function addNum(numero){
-    document.getElementById('visor').value += numero;
+    document.getElementById('visor').value += numero
 }
 
 function displayClear(){
-    document.getElementById('visor').value = ''; 
+    document.getElementById('visor').value = ''
 } 
 
 function addOp(operacao){
-    document.getElementById('visor').value += operacao;
+    document.getElementById('visor').value += operacao
 }
 
 function calcular_resultado(){
-    let visor = document.getElementById('visor');
+    let visor = document.getElementById('visor')
     let expressao = visor.value;
     
     try {
-        let resultado = eval(expressao);
-        visor.value = resultado;
+        let resultado = eval(expressao)
+        visor.value = resultado
     }catch (error){
-        visor.value = "Erro";
+        visor.value = "Erro"
 }
 
 }
