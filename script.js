@@ -28,6 +28,12 @@ function addOp(operacao){
     document.getElementById('visor').value += operacao
 }
 
+function apagar(){
+    let a = document.getElementById('visor')
+    a.value = a.value.substring(0, a.value.length -1)
+
+}
+
 function calcular_resultado(){
     let visor = document.getElementById('visor')
     let expressao = visor.value;
